@@ -611,7 +611,7 @@ impl ExecutionProvider {
 						.clone()
 						.map(|x| x.as_bytes().as_ptr() as *const c_char)
 						.unwrap_or_else(ptr::null),
-					num_of_threads: options.num_threads as u64,
+					num_of_threads: options.num_threads as size_t,
 					cache_dir: options
 						.cache_dir
 						.clone()
